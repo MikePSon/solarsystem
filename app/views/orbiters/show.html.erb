@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orbiter.name %>
+</p>
+
+<p>
+  <strong>Orbit distance:</strong>
+  <%= @orbiter.orbit_distance %>
+</p>
+
+<p>
+  <strong>Orbit speed:</strong>
+  <%= @orbiter.orbit_speed %>
+</p>
+
+<p>
+  <strong>Diameter:</strong>
+  <%= @orbiter.diameter %>
+</p>
+
+<p>
+  <strong>Mass:</strong>
+  <%= @orbiter.mass %>
+</p>
+
+<%= link_to 'Edit', edit_orbiter_path(@orbiter) %> |
+<%= link_to 'Back', orbiters_path %>

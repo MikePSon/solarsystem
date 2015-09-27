@@ -1,0 +1,37 @@
+<%= form_for(@orbiter) do |f| %>
+  <% if @orbiter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orbiter.errors.count, "error") %> prohibited this orbiter from being saved:</h2>
+
+      <ul>
+      <% @orbiter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :orbit_distance %><br>
+    <%= f.text_field :orbit_distance %>
+  </div>
+  <div class="field">
+    <%= f.label :orbit_speed %><br>
+    <%= f.text_field :orbit_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :diameter %><br>
+    <%= f.text_field :diameter %>
+  </div>
+  <div class="field">
+    <%= f.label :mass %><br>
+    <%= f.text_field :mass %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
